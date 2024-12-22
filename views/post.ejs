@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1><%= post.title %></h1>
+  <p><%= post.content %></p>
+
+  <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">Edit</a>
+
+  <form action="/posts/<%= post.id %>/delete" method="POST" class="d-inline">
+    <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
